@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Vehicles</title>
+</head>
+<body>
+    <h1>Available Vehicles</h1>
+    <ul>
+        {% for vehicle in vehicles %}
+            <li>{{ vehicle.name }} - {{ vehicle.vehicle_type }} - ${{ vehicle.price_per_hour }} per hour</li>
+        {% empty %}
+            <li>No vehicles available at the moment.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
